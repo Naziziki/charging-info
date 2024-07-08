@@ -2,9 +2,9 @@ function isChrome() {
   return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 }
 
-if (!isChrome()) {
-  alert('Your browser may not be supported to display all data in this application');
-}
+// if (!isChrome()) {
+//   alert('Your browser may not be supported to display all data in this application');
+// }
     const error = document.querySelector('.error');
 
 if (!isChrome()) {
