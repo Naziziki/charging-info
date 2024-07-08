@@ -1,3 +1,16 @@
+function isChrome() {
+  return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+}
+
+if (!isChrome()) {
+  alert('Your browser may not be supported to display all data in this application');
+}
+    const error = document.querySelector('.error');
+
+if (!isChrome()) {
+                error.innerHTML = `<i class="fa-solid fa-gear fa-shake" style="color: #fb2d2d;"></i>  Your browser may not be supported to display \n 
+                all data in this application`;
+            }
 initBattery();
 console.log(navigator.getBattery());
 function initBattery() {
@@ -7,6 +20,8 @@ function initBattery() {
 
     navigator.getBattery().then((batt) => {
         let updateBattery = () => {
+
+            
             bPercentage.innerHTML = `${batt.level * 100}%`;
             let level = batt.level * 100;
             console.log(level); 

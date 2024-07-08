@@ -38,11 +38,12 @@ body {
 
 .container {
   display: flex;
+  padding: 40px 0;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 300px;
-  height: 300px;
+
   border-radius: 25px;
   background-color: #3d3d3d;
   gap: 15px;
@@ -83,6 +84,13 @@ body {
 .info-details {
   font-size: 18px;
   font-weight: 500;
+  color: white;
+}
+
+.error {
+  padding-top: 5px;
+  max-width: 130px;
+  font-weight: 400;
   color: white;
 }
 
