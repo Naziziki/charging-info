@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient-color-red: linear-gradient(
+    90deg,
+    hsl(7, 89%, 46%) 15%,
+    hsl(11, 93%, 68%) 100%
+  );
+  --gradient-color-orange: linear-gradient(
+    90deg,
+    hsl(22, 89%, 46%) 15%,
+    hsl(54, 90%, 68%) 100%
+  );
+  --gradient-color-yellow: linear-gradient(
+    90deg,
+    hsl(54, 89%, 46%) 15%,
+    hsl(92, 90%, 45%) 100%
+  );
+  --gradient-color-green: linear-gradient(
+    90deg,
+    hsl(92, 89%, 46%) 15%,
+    hsl(92, 90%, 68%) 100%
+  );
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #141414;
+  font-family: Montserrat;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  background-color: #3d3d3d;
+  gap: 15px;
+}
+
+/* Liquid Level  */
+.b-status {
+  width: 85px;
+  height: 200px;
+  border-radius: 25px;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: inset 20px 0 48px hsl(0, 0%, 16%),
+    inset -4px 12px 48px hsl(0, 0%, 56%);
+}
+
+.b-levelPercentage {
+  /* background: var(--gradient-color-red); */
+  /* height: ; */
+  width: 100%;
+}
+
+/* Battery info  */
+.info-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.info-percentage {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.info-details {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Animation  */
+.green-color {
+  background: var(--gradient-color-green);
+}
+
+.animated-green {
+  background: var(--gradient-color-green);
+  animation: animated-charging 1.2s infinite alternate;
+}
+
+.animated-red {
+  background: var(--gradient-color-red);
+  animation: animated-low 1.2s infinite alternate;
+}
+
+.animated-green,
+.animated-red,
+.green-color {
+  -webkit-background-clip: text;
+  color: transparent;
+}
